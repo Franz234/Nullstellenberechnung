@@ -1,0 +1,56 @@
+﻿<Window x:Class="Nullstellenberechnung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nullstellenberechnung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="quadratisch">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Berechnung der Nullstellen von quadratischen Funktion  der Form f(x)= ax^2+bx+c" VerticalAlignment="Top" Width="754" Margin="10,42,0,0" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="22,102,0,0" Height="27" Width="60" FontSize="16"><Run Text="0=f(x"/><Run Text=")="/></TextBlock>
+                    <TextBox x:Name="TxtBx_a" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" Margin="87,102,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="x^2 +" VerticalAlignment="Top" Margin="154,106,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Margin="110,81,0,0"/>
+                    <TextBox x:Name="TxtBx_b" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Margin="206,102,0,0"/>
+                    <TextBox x:Name="TxtBx_c" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Margin="312,102,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="x+" VerticalAlignment="Top" Margin="282,109,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="b" VerticalAlignment="Top" Margin="229,81,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Margin="312,84,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="c" VerticalAlignment="Top" Margin="337,81,0,0"/>
+                    <Button Content="Nullstellen berechnen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="437,138,0,0" Height="42" Click="Button_Click"/>
+                    <TextBox x:Name="TxtBx_Ausgabe" HorizontalAlignment="Left" Height="114" TextWrapping="Wrap" VerticalAlignment="Top" Width="661" Margin="22,194,0,0" FontSize="20" BorderThickness="0" IsReadOnly="True"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="kubisch" RenderTransformOrigin="2.4,0.573" Margin="0,0,-4,-2" HorizontalAlignment="Right" Width="52">
+                 <Grid>
+                    <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="754" Margin="10,42,0,0" FontSize="16"><Run Text="Berechnung der Nullstellen von quadratischen Funktion  der Form f(x)= ax^"/><Run Text="3"/><Run Text="+bx"/><Run Text="^2"/><Run Text="+c"/><Run Text="x+d"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="22,102,0,0" Height="27" Width="60" FontSize="16"><Run Text="0=f(x"/><Run Text=")="/></TextBlock>
+                    <TextBox x:Name="TxtBx_d" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" Margin="87,102,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="154,106,0,0"><Run Text="x^"/><Run Text="3"/><Run Text=" +"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Margin="110,81,0,0"/>
+                    <TextBox x:Name="TxtBx_f" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Margin="206,102,0,0"/>
+                    <TextBox x:Name="TxtBx_g" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Margin="337,102,0,0" TextChanged="TxtBx_g_TextChanged"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="282,109,0,0" Width="45"><Run Text="x"/><Run Text="^"/><Run Text="2"/><Run Text="+"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="b" VerticalAlignment="Top" Margin="229,81,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Margin="312,84,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="c" VerticalAlignment="Top" Margin="362,81,0,0"/>
+                    <Button Content="Nullstellen berechnen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="451,152,0,0" Height="42" Click="Button_Click"/>
+                    <TextBox x:Name="TxtBx_Ausgabe1" HorizontalAlignment="Left" Height="114" TextWrapping="Wrap" VerticalAlignment="Top" Width="661" Margin="22,194,0,0" FontSize="20" BorderThickness="0" IsReadOnly="True"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="x +" VerticalAlignment="Top" Margin="408,106,0,0"/>
+                    <TextBox x:Name="TxtBx_h" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Margin="451,102,0,0"/>
+
+                </Grid>
+                
+
+            </TabItem>
+
+        </TabControl>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="d" VerticalAlignment="Top" Margin="482,107,0,0"/>
+
+    </Grid>
+</Window>
